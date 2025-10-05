@@ -1,28 +1,43 @@
-import Image from "next/image";
 import ProfileComponent from "./Components/Elements/Profile";
 
 export default function Home() {
 	const users = [
 		{
-			name: "Alvrzan",
+			name: "Alfi Reza",
 			role: "Fullstack Developer",
-			birthDate: "5th, February 2002",
+			birthDate: "5th February 2002",
 			imageSrc: "/images/alvrzan.png",
 		},
 	];
+
 	return (
-		<div className="min-h-screen flex items-center justify-center bg-gradient-to-tr  from-gray-300 to-blue-300">
-			<div className="grid grid-cols-1 items-center justify-center text-black">
-				{users.map((user) => (
-					<ProfileComponent
-						key={user.name}
-						name={user.name}
-						role={user.role}
-						birthDate={user.birthDate}
-						imageSrc={user.imageSrc}
-					/>
-				))}
+		<section
+			id="about"
+			className="flex flex-col items-center justify-center py-20 px-6 text-center">
+			{users.map((user) => (
+				<ProfileComponent
+					key={user.name}
+					name={user.name}
+					role={user.role}
+					birthDate={user.birthDate}
+					imageSrc={user.imageSrc}
+				/>
+			))}
+
+			<div className="max-w-xl mt-8 text-gray-700 leading-relaxed">
+				<p>
+					Hi! I’m <span className="font-semibold text-blue-600">Alfi Reza</span>
+					, a passionate Fullstack Developer who loves crafting modern,
+					responsive, and scalable web applications. I enjoy learning new
+					technologies and building tools that make life easier.
+				</p>
 			</div>
-		</div>
+
+			<a
+				href="#projects"
+				className="mt-8 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
+				View My Projects
+			</a>
+		</section>
 	);
 }

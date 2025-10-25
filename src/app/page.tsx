@@ -1,4 +1,4 @@
-import ProfileComponent from "./Components/Elements/Profile";
+import ProfileComponent from "../components/Elements/Profile";
 
 export default function Home() {
 	const users = [
@@ -34,7 +34,7 @@ export default function Home() {
 			</div>
 
 			<a
-				href="#projects"
+				href="/projects"
 				className="mt-8 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
 				View My Projects
 			</a>
